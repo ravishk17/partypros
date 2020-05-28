@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t ravishk17/partypros -f Dockerfile.dev .
+    - docker build -t ravishk17/partypros -f Dockerfile .
 
 script:
     - docker run -e CI=true ravishk17/partypros npm run test
