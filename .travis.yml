@@ -13,7 +13,7 @@ deploy:
     region: "us-east-2"
     app: "partypros"
     env: "Partypros-env"
-    bucket_name: "elasticbeanstalk:us-east-2:119094900355"
+    bucket_name: "elasticbeanstalk-us-east-2-119094900355"
     bucket_path: "partypros"
     on:
         branch: master
