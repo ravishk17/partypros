@@ -8,16 +8,16 @@ before_install:
 script:
     - docker run -e CI=true ravishk17/partypros npm run test
 
-# deploy:
-#     provider: elasticbeanstalk
-#     region: "us-east-1"
-#     app: "docker"
-#     env: "Docker-env"
-#     bucket_name: "elasticbeanstalk-us-east-1-684483971995"
-#     bucket_path: "docker"
-#     on:
-#         branch: master
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "partypros"
+    env: "Partypros-env"
+    bucket_name: "elasticbeanstalk:us-east-2:119094900355"
+    bucket_path: "partypros"
+    on:
+        branch: master
         
 
-# access_key_id: $AWS_ACCESS_KEY
-# secret_access_key: $AWS_SECRET_KEY
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: $AWS_SECRET_KEY
